@@ -20,10 +20,10 @@ void reza(T *a,int i,int j)
 
 void display()
 {
- cout<<"\nNo\t\tW\t\tP\t\tP/W\n";
+ cout<<"\nNo\t\tW\t\tP\n";
  
  for(int i=0;i<n;i++)
-  cout<<p_no[i]<<"\t\t"<<w[i]<<"\t\t"<<p[i]<<"\t\t"<<d[i]<<"\n";
+  cout<<p_no[i]<<"\t\t"<<w[i]<<"\t\t"<<p[i]<<"\n";
 
 
 }
@@ -55,8 +55,10 @@ void knapsack()
    if(p_no[i]>p_no[j])
    {
     reza(p_no,i,j);
-    reza(x,i,j);
+    reza(w,i,j);
     reza(p,i,j);
+    reza(d,i,j);
+    reza(x,i,j);
    }
   }
  }
@@ -71,7 +73,7 @@ void knapsack()
  cout<<"\nNo\t\tW\t\tP\t\tP/W\t\tFrac\n";
  
  for(int i=0;i<n;i++)
-  cout<<p_no[i]<<"\t\t"<<w[i]<<"\t\t"<<p[i]<<"\t\t"<<d[i]<<"\t\t"<<x[i]<<"\n";
+  cout<<p_no[i]<<"\t\t"<< w[i]<<"\t\t"<<p[i]<<"\t\t"<<d[i]<<"\t\t"<<x[i]<<"\n";
  
  cout<<"\n\njumlah barang baawaan maksimal\t"<<opt_solution;
 }
