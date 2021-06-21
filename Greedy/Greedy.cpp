@@ -38,7 +38,7 @@ void sort(int a[],int siz) {
     int pass,hold,j;
     for(pass=1;pass<=siz-1;pass++) {
         for(j=pass;j<siz;j++) {
-            if(a[pass-1]>a[j]) {
+            if(a[pass-1]<a[j]) {
                 hold=a[pass-1];
                 a[pass-1]=a[j];
                 a[j]=hold;
